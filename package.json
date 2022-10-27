@@ -1,0 +1,26 @@
+{
+  "name": "cafe-dolce",
+  "version": "1.0.0",
+  "description": "Coffee Shop Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1987mat/CafeDolce.git"
+  },
+  "author": "Mat",
+  "license": "ISC",
+  "dependencies": {
+    "@wordpress/scripts": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/1987mat/CafeDolce/issues"
+  },
+  "homepage": "https://github.com/1987mat/CafeDolce#readme"
+}
