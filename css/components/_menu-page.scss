@@ -1,0 +1,61 @@
+.menu-hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/menu-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100vw;
+  margin-top: -55px;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: normal;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  margin-bottom: 10em;
+
+  h2 {
+    margin: 2em;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  img {
+    width: 80%;
+    height: 80%;
+    border-radius: 2px;
+  }
+
+  .images-wrapper {
+    margin: 2em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      width: 36em;
+      height: 24em;
+
+      img {
+        border-radius: 2px;
+      }
+    }
+  }
+}

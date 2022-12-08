@@ -1,6 +1,7 @@
 # Cafe`Dolce Wordpress Site
 
-<p>Coffee shop wordpress site. Custom theme developed with HTML, SCSS, JS and PHP.</p>
+<p>Coffee shop Wordpress website. 
+Custom theme developed with HTML, SCSS, Javascript and PHP.</p>
 
 ## Links
 
@@ -14,11 +15,11 @@
 
 ## Built With
 
-- JavaScript
-- Webpack
 - HTML
 - SCSS
 - PHP
+- JavaScript
+- Webpack
 
 ## Author
 

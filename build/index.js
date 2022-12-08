@@ -37,37 +37,6 @@ class ContactForm {
 
 /***/ }),
 
-/***/ "./src/modules/FadeInHomePage.js":
-/*!***************************************!*\
-  !*** ./src/modules/FadeInHomePage.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-class FadeIn {
-  constructor() {
-    this.title = document.querySelector('.heading-title');
-    this.subTitle = document.querySelector('.heading-subtitle');
-
-    if (this.title && this.subTitle) {
-      this.events();
-    }
-  }
-
-  events() {
-    this.title.classList.add('slide');
-    this.subTitle.classList.add('slide');
-  }
-
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FadeIn);
-
-/***/ }),
-
 /***/ "./src/modules/MobileMenu.js":
 /*!***********************************!*\
   !*** ./src/modules/MobileMenu.js ***!
@@ -117,16 +86,13 @@ class Navbar {
     this.events();
     this.hasScrolled;
     this.lastScrollTop = 0;
-    this.delta = 5;
     this.navbarHeight = this.header.getBoundingClientRect().height;
   }
 
   events() {
     window.addEventListener('scroll', () => {
-      // Hide navbar only on bigger screens
       if (window.innerWidth >= 992) {
-        this.hasScrolled = true; // Check condition every 250ms
-
+        this.hasScrolled = true;
         setInterval(() => {
           if (this.hasScrolled) {
             this.scroll();
@@ -138,12 +104,10 @@ class Navbar {
   }
 
   scroll() {
-    // Get current scroll value
-    let prev = window.pageYOffset; // If they scrolled down and are past the navbar, add class .hide
+    let prev = window.pageYOffset; // Scroll Down
 
     if (prev > this.lastScrollTop && prev > this.navbarHeight) {
-      // Scroll Down
-      this.header.classList.add('hide');
+      this.header.classList.add('hide'); // Scroll Up
     } else {
       this.header.classList.remove('hide');
     }
@@ -154,6 +118,37 @@ class Navbar {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
+
+/***/ }),
+
+/***/ "./src/modules/SlideInHero.js":
+/*!************************************!*\
+  !*** ./src/modules/SlideInHero.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class FadeIn {
+  constructor() {
+    this.title = document.querySelector('.heading-title');
+    this.subTitle = document.querySelector('.heading-subtitle');
+
+    if (this.title && this.subTitle) {
+      this.events();
+    }
+  }
+
+  events() {
+    this.title.classList.add('slide');
+    this.subTitle.classList.add('slide');
+  }
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FadeIn);
 
 /***/ })
 
@@ -222,7 +217,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_NavBarScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/NavBarScroll */ "./src/modules/NavBarScroll.js");
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
-/* harmony import */ var _modules_FadeInHomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/FadeInHomePage */ "./src/modules/FadeInHomePage.js");
+/* harmony import */ var _modules_SlideInHero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/SlideInHero */ "./src/modules/SlideInHero.js");
 /* harmony import */ var _modules_ContactForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ContactForm */ "./src/modules/ContactForm.js");
 
 
@@ -230,7 +225,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const navbar = new _modules_NavBarScroll__WEBPACK_IMPORTED_MODULE_0__["default"]();
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const fadeIn = new _modules_FadeInHomePage__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const slideInHero = new _modules_SlideInHero__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const contactForm = new _modules_ContactForm__WEBPACK_IMPORTED_MODULE_3__["default"]();
 })();
 

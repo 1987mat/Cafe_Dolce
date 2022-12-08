@@ -6,7 +6,7 @@
 
 <div class="container">
 
-  <div class="contact-image">
+  <div class="contact-hero-image">
     <h1><?php the_title();?></h1>
   </div>
 

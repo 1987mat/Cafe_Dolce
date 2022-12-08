@@ -3,12 +3,10 @@
 ?>
 
 <div class="container">
-
  
-  <div class="bg-image">
+  <div class="about-hero-image">
     <h1><?php the_title();?></h1>
   </div>
-
 
   <div class="about-container">
 

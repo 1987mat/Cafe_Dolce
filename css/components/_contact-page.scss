@@ -1,0 +1,110 @@
+.contact-hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100vw;
+  margin-top: -55px;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: normal;
+  }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  margin-top: 4em;
+  margin-bottom: 20em;
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      margin: 1em;
+      font-size: 4rem;
+    }
+
+    .message {
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 1em;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1em;
+      width: 70%;
+      position: relative;
+      z-index: 8;
+
+      input,
+      textarea {
+        font-family: 'Josefin Sans', sans-serif;
+        border-radius: 2px;
+        margin: 0.5em;
+        padding: 1em;
+        border: 0.5px solid gray;
+      }
+
+      .submit-btn {
+        border: none;
+        padding: 1.5em;
+        border-radius: 2px;
+        background-color: lightgray;
+        font-weight: bold;
+        opacity: 1;
+        background-color: lightgray;
+        transition: background-color 0.2s ease-in;
+
+        &:hover {
+          background-color: gainsboro;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .location-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      margin: 2em;
+      font-size: 4rem;
+    }
+
+    .location-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6em;
+      width: 40em;
+
+      .map-container {
+        position: relative;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+      }
+    }
+  }
+}

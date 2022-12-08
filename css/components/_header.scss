@@ -1,0 +1,82 @@
+header {
+  position: fixed;
+  top: 5px;
+  height: 3em;
+  left: 40px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12em;
+  transition: top 0.3s linear;
+
+  &.hide {
+    top: -200px;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    padding: 2em;
+    border-radius: 2px;
+    background-image: url('../images/logo.png');
+    background-size: cover;
+    background-position: center;
+    width: 3em;
+    height: 3em;
+  }
+
+  .main-navigation {
+    ul {
+      li {
+        list-style-type: none;
+
+        a {
+          font-weight: bold;
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 10px;
+          }
+        }
+      }
+    }
+
+    /* Selected page nav link */
+    .current-menu-item {
+      a {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 10px;
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+    gap: 2em;
+
+    a {
+      font-size: 1.8rem;
+      transition: transform 0.3s linear;
+
+      i {
+        color: #002244;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
