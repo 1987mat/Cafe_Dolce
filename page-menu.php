@@ -4,19 +4,19 @@
 
 <div class="container">
 
-  <div class="menu-hero-image">
+  <div class="menu-hero-image" data-observe>
     <h1><?php the_title();?></h1>
   </div>
 
   <div class="menu-container">
-    <h2>Find your favourite</h2>
+    <h2 data-observe>Find your favourite</h2>
 
     <?php 
       $src = get_template_directory_uri() . '/images/menu-img.jpg';
     ?>
     <img src="<?php echo $src; ?>">
 
-    <div class="images-wrapper">
+    <div class="images-wrapper" data-observe>
       <div>
         <img src="<?php echo get_template_directory_uri() . '/images/menu-img1.jpg'; ?>">
         <p>Espresso Coffee <strong>- $2.50 -</strong></p>

@@ -79,7 +79,7 @@ header {
     z-index: 20;
     transform: translateX(-100%);
     opacity: 0;
-    transition: transform 300ms ease-in, opacity 300ms ease-in;
+    transition: transform 0.3s ease;
 
     ul {
       padding: 10em;
@@ -101,7 +101,7 @@ header {
 
       @keyframes fadeIn {
         0% {
-          transform: translateX(-100%);
+          transform: translateX(30%);
         }
 
         100% {
@@ -111,7 +111,7 @@ header {
 
       ul {
         li {
-          animation: fadeIn ease 0.6s;
+          animation: fadeIn ease-in-out 0.2s;
 
           &:nth-child(1) {
             animation-delay: 100ms;

@@ -6,12 +6,11 @@
 
 <div class="container">
 
-  <div class="contact-hero-image">
+  <div class="contact-hero-image" data-observe>
     <h1><?php the_title();?></h1>
   </div>
 
-  <div class="contact-container">
-
+  <div class="contact-container" data-observe>
     <div class="form-container">
       <h2>Get in touch</h2>
       <span class="message"></span>

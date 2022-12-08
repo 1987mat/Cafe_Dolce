@@ -9,6 +9,12 @@
   height: 80vh;
   width: 100vw;
   margin-top: -55px;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+
+  &.active {
+    transform: translateY(0);
+  }
 
   h1 {
     font-size: 5rem;
@@ -36,6 +42,12 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
 
     .content-wrapper {
       display: flex;
@@ -64,6 +76,12 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
 
     p {
       line-height: 180%;

@@ -4,7 +4,7 @@
 
 <div class="container">
  
-  <div class="about-hero-image">
+  <div class="about-hero-image" data-observe>
     <h1><?php the_title();?></h1>
   </div>
 
@@ -14,7 +14,7 @@
       the_post();
       ?>
 
-      <div class="history">
+      <div class="history" data-observe>
         <h2>Who We Are</h2>
         <div class="content-wrapper">
           <?php
@@ -28,7 +28,7 @@
     }
     ?>
 
-    <div class="feed">
+    <div class="feed" data-observe>
       <h2>Our Coffee</h2>
       <p>Our dedicated and passionate team carefully selects the best types of coffee from around the world. From Costa Rica to Italy, here you will find a huge variety for every palate.</p>
       <div class="feed-images">

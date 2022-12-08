@@ -121,34 +121,30 @@ class Navbar {
 
 /***/ }),
 
-/***/ "./src/modules/SlideInHero.js":
-/*!************************************!*\
-  !*** ./src/modules/SlideInHero.js ***!
-  \************************************/
+/***/ "./src/modules/fadeInOnScroll.js":
+/*!***************************************!*\
+  !*** ./src/modules/fadeInOnScroll.js ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "fadeInOnScroll": () => (/* binding */ fadeInOnScroll)
 /* harmony export */ });
-class FadeIn {
-  constructor() {
-    this.title = document.querySelector('.heading-title');
-    this.subTitle = document.querySelector('.heading-subtitle');
-
-    if (this.title && this.subTitle) {
-      this.events();
-    }
-  }
-
-  events() {
-    this.title.classList.add('slide');
-    this.subTitle.classList.add('slide');
-  }
-
+function fadeInOnScroll() {
+  const elements = document.querySelectorAll('[data-observe');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('active', entry.isIntersecting);
+      if (entry.isIntersecting) observer.unobserve(entry.target);
+    });
+  }, {
+    treshold: 0.7
+  });
+  [...elements].forEach(el => {
+    observer.observe(el);
+  });
 }
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FadeIn);
 
 /***/ })
 
@@ -217,16 +213,16 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_NavBarScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/NavBarScroll */ "./src/modules/NavBarScroll.js");
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
-/* harmony import */ var _modules_SlideInHero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/SlideInHero */ "./src/modules/SlideInHero.js");
-/* harmony import */ var _modules_ContactForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ContactForm */ "./src/modules/ContactForm.js");
+/* harmony import */ var _modules_ContactForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ContactForm */ "./src/modules/ContactForm.js");
+/* harmony import */ var _modules_fadeInOnScroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/fadeInOnScroll */ "./src/modules/fadeInOnScroll.js");
 
 
 
 
 const navbar = new _modules_NavBarScroll__WEBPACK_IMPORTED_MODULE_0__["default"]();
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const slideInHero = new _modules_SlideInHero__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const contactForm = new _modules_ContactForm__WEBPACK_IMPORTED_MODULE_3__["default"]();
+const contactForm = new _modules_ContactForm__WEBPACK_IMPORTED_MODULE_2__["default"]();
+(0,_modules_fadeInOnScroll__WEBPACK_IMPORTED_MODULE_3__.fadeInOnScroll)();
 })();
 
 /******/ })()
