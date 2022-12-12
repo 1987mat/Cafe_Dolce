@@ -58,6 +58,7 @@ html body header .main-navigation {
 }
 html body header .main-navigation ul li {
   list-style-type: none;
+  text-shadow: 0.5px 0.5px 0.5px gray;
 }
 html body header .main-navigation ul li a {
   font-weight: bold;
@@ -84,7 +85,7 @@ html body header .social-media {
   gap: 2em;
 }
 html body header .social-media a {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   transition: transform 0.3s linear;
 }
 html body header .social-media a i {
@@ -672,7 +673,7 @@ html .feed-images {
     left: -200px;
   }
   html header .main-navigation ul {
-    gap: 3em;
+    gap: 2.5em;
   }
   html header .main-navigation ul li {
     font-size: 4rem;
@@ -688,7 +689,7 @@ html .feed-images {
     font-size: 140%;
   }
   html header .main-navigation {
-    left: -100px;
+    left: -200px;
   }
   html header .main-navigation ul {
     gap: 4em;
@@ -699,9 +700,9 @@ html .feed-images {
     font-size: 200%;
   }
   html header .main-navigation {
-    left: -250px;
+    left: -400px;
   }
   html header .main-navigation ul {
-    gap: 1em;
+    gap: 3em;
   }
 }/*# sourceMappingURL=style.css.map */
