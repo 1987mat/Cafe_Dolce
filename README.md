@@ -11,7 +11,7 @@ Custom theme developed with HTML, SCSS, Javascript and PHP.</p>
 
 ## Screenshots
 
-<img src="https://user-images.githubusercontent.com/64235918/198387013-94a4f329-638d-4d94-b7e9-bd366f8b0fcb.png" width="400"/>
+<img src="https://user-images.githubusercontent.com/64235918/207128216-e6bc2bd5-2378-4dc2-8374-da37e857b333.png" width="400"/>
 
 ## Built With
 
