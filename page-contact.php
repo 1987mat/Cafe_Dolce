@@ -26,6 +26,11 @@
     <div class="location-wrapper">
       <h2>Location</h2>
       <div class="location-container">
+        <div class="hours">
+          <h3>Hours</h3>
+          <p><i>Mon-Fri</i> 6AM-3PM</p>
+          <p><i>Sat-Sun</i> Closed</p>
+        </div>
         <div class="map-container">
           <?php
             $mymap = new Mappress_Map(array("width" => 600));
@@ -33,11 +38,6 @@
             $mymap->pois = array($mypoi); 
             echo $mymap->display();
           ?>
-        </div>
-        <div class="hours">
-          <h3>Hours</h3>
-          <p><i>Mon-Fri</i> 6AM-3PM</p>
-          <p><i>Sat-Sun</i> Closed</p>
         </div>
       </div>
     </div>

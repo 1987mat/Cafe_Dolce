@@ -31,10 +31,6 @@ html {
     @import 'components/header';
 
     main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
       background-image: url('../images/heading-photo.jpg');
       background-size: cover;
       background-position: center;
