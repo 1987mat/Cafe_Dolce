@@ -8,7 +8,7 @@
   <?php wp_head(); ?>
   <title>Café Dolce</title>
 </head>
-<body>
+<body <?php body_class(); ?>>
   <header class="site-header">
     <div class="hamburger">
       <div></div>

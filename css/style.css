@@ -25,6 +25,7 @@ html body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  /* Hide footer on homepage only */
 }
 html body header {
   position: fixed;
@@ -58,7 +59,6 @@ html body header .main-navigation {
 }
 html body header .main-navigation ul li {
   list-style-type: none;
-  text-shadow: 0.5px 0.5px 0.5px gray;
 }
 html body header .main-navigation ul li a {
   font-weight: bold;
@@ -96,14 +96,23 @@ html body header .social-media a:hover {
   transform: scale(1.1);
 }
 html body main {
-  background-image: url("../images/heading-photo.jpg");
-  background-size: cover;
-  background-position: center;
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
+}
+html body main::before {
+  content: "";
+  background-image: url("../images/heading-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.9;
 }
 html body main .heading-section {
   display: flex;
@@ -139,7 +148,7 @@ html body main .heading-section .heading .homepage-btn {
   font-weight: bold;
   width: 30%;
   margin-top: 2em;
-  padding: 1em;
+  padding: 1.2em 1em 1em 1em;
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -419,6 +428,9 @@ html body .container .menu-container .images-wrapper div {
 }
 html body .container .menu-container .images-wrapper div img {
   border-radius: 2px;
+}
+html body.home footer {
+  display: none;
 }
 html footer {
   margin-top: auto;

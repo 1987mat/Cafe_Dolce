@@ -31,14 +31,24 @@ html {
     @import 'components/header';
 
     main {
-      background-image: url('../images/heading-photo.jpg');
-      background-size: cover;
-      background-position: center;
       height: 100vh;
       width: 100vw;
       position: fixed;
       top: 0;
       left: 0;
+
+      &::before {
+        content: '';
+        background-image: url('../images/heading-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.9;
+      }
       @import 'components/hero';
     }
 
@@ -47,7 +57,15 @@ html {
       @import 'components/contact-page';
       @import 'components/menu-page';
     }
+
+    /* Hide footer on homepage only */
+    &.home {
+      footer {
+        display: none;
+      }
+    }
   }
+
   @import 'components/footer';
 }
 
