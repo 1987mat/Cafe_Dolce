@@ -1,7 +1,6 @@
 <?php
   get_header();
 ?>
-
 <main>
   <section class="heading-section">
     <div class="heading" data-observe>
@@ -11,6 +10,5 @@
     </div>
   </section>
 </main>
-
 <?php
   get_footer();

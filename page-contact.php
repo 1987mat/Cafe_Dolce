@@ -12,7 +12,7 @@
 
   <div class="contact-container" data-observe>
     <div class="form-container">
-      <h2>Get in touch</h2>
+      <h2>Get In Touch</h2>
       <span class="message"></span>
       <form class="contact-form">
         <input type="text" placeholder="First Name" required>

@@ -9,7 +9,7 @@
   </div>
 
   <div class="menu-container">
-    <h2 data-observe>Find your favourite</h2>
+    <h2 data-observe>Choose Your Favorite Coffee</h2>
 
     <?php 
       $src = get_template_directory_uri() . '/images/menu-img.jpg';
