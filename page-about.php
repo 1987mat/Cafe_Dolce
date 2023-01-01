@@ -3,11 +3,9 @@
 ?>
 
 <div class="container">
- 
   <div class="about-hero-image" data-observe>
     <h1><?php the_title();?></h1>
   </div>
-
   <div class="about-container">
 
     <?php while(have_posts()) {
@@ -20,7 +18,7 @@
           <?php
           the_content();
           ?>
-          <img src="<?php echo get_the_post_thumbnail_url();?>" class="image">
+          <img src="<?php echo get_the_post_thumbnail_url();?>" class="image" alt="history">
         </div>
       </div>
 
