@@ -64,13 +64,16 @@ html body header .main-navigation ul li a {
   font-weight: bold;
   font-size: 1.2rem;
   text-decoration: none;
+  text-decoration-color: transparent;
   color: black;
+  transition: text-decoration-color 0.6s ease-in-out;
 }
 html body header .main-navigation ul li a:hover {
   cursor: pointer;
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 10px;
+  text-decoration-color: black;
 }
 html body header .main-navigation .current-menu-item a {
   text-decoration: underline;
@@ -537,14 +540,6 @@ html footer {
     transform: translateX(0);
     opacity: 1;
   }
-  @-webkit-keyframes fadeIn {
-    0% {
-      transform: translateX(30%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
   @keyframes fadeIn {
     0% {
       transform: translateX(30%);
@@ -554,24 +549,19 @@ html footer {
     }
   }
   html header .main-navigation.show ul li {
-    -webkit-animation: fadeIn ease-in-out 0.2s;
-            animation: fadeIn ease-in-out 0.2s;
+    animation: fadeIn ease-in-out 0.2s;
   }
   html header .main-navigation.show ul li:nth-child(1) {
-    -webkit-animation-delay: 100ms;
-            animation-delay: 100ms;
+    animation-delay: 100ms;
   }
   html header .main-navigation.show ul li:nth-child(2) {
-    -webkit-animation-delay: 200ms;
-            animation-delay: 200ms;
+    animation-delay: 200ms;
   }
   html header .main-navigation.show ul li:nth-child(3) {
-    -webkit-animation-delay: 300ms;
-            animation-delay: 300ms;
+    animation-delay: 300ms;
   }
   html header .main-navigation.show ul li:nth-child(4) {
-    -webkit-animation-delay: 400ms;
-            animation-delay: 400ms;
+    animation-delay: 400ms;
   }
   html main {
     display: flex;
@@ -583,7 +573,7 @@ html footer {
     margin-top: 10em;
   }
   html .content-wrapper,
-html .feed-images {
+  html .feed-images {
     justify-content: center;
     align-items: center;
     flex-direction: column;
