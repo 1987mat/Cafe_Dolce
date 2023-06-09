@@ -12,7 +12,7 @@
       align-items: center;
 
       .heading-section {
-        margin-top: 10em;
+        margin-top: 15em;
       }
     }
 
@@ -74,6 +74,12 @@
       .main-navigation {
         ul {
           gap: 14em;
+
+          li {
+            a {
+              font-size: 3rem;
+            }
+          }
         }
       }
     }
@@ -123,11 +129,7 @@
             list-style-type: none;
 
             a {
-              font-size: 0.9rem;
-
-              &:hover {
-                cursor: pointer;
-              }
+              font-size: initial;
             }
           }
         }
@@ -140,6 +142,7 @@
       padding-left: 4em;
 
       .heading-section {
+        margin-top: 6em;
         .heading {
           .heading-title {
             font-size: larger;

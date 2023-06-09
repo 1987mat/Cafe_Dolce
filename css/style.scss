@@ -5,6 +5,7 @@
   font-family: 'Josefin Sans', sans-serif;
   color: #383838;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -47,7 +48,6 @@ html {
         right: 0px;
         bottom: 0px;
         left: 0px;
-        opacity: 0.9;
       }
       @import 'components/hero';
     }

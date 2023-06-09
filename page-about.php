@@ -3,8 +3,8 @@
 ?>
 
 <div class="container">
-  <div class="about-hero-image" data-observe>
-    <h1><?php the_title();?></h1>
+  <div class="about-hero-image">
+    <h1 data-observe><?php the_title();?></h1>
   </div>
   <div class="about-container">
 

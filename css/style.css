@@ -4,6 +4,7 @@
   font-family: "Josefin Sans", sans-serif;
   color: #383838;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -61,19 +62,22 @@ html body header .main-navigation ul li {
   list-style-type: none;
 }
 html body header .main-navigation ul li a {
-  font-weight: bold;
   font-size: 1.2rem;
   text-decoration: none;
+  -webkit-text-decoration: none;
   text-decoration-color: transparent;
+  -webkit-text-decoration-color: transparent;
   color: black;
   transition: text-decoration-color 0.6s ease-in-out;
 }
 html body header .main-navigation ul li a:hover {
   cursor: pointer;
   text-decoration: underline;
+  -webkit-text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 10px;
   text-decoration-color: black;
+  -webkit-text-decoration-color: black;
 }
 html body header .main-navigation .current-menu-item a {
   text-decoration: underline;
@@ -115,26 +119,27 @@ html body main::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.9;
 }
 html body main .heading-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+html body main .heading-section.active {
+  opacity: 0.9;
 }
 html body main .heading-section .heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(-200px);
-  transition: transform 0.8s ease;
-}
-html body main .heading-section .heading.active {
-  transform: translateX(0);
 }
 html body main .heading-section .heading .heading-title {
-  font-size: 6rem;
+  font-size: 7rem;
   color: white;
   text-shadow: 1px 1px 1px gray;
 }
@@ -149,7 +154,7 @@ html body main .heading-section .heading .homepage-btn {
   box-shadow: 0 0 8px #282828;
   color: whitesmoke;
   font-weight: bold;
-  width: 30%;
+  width: 35%;
   margin-top: 2em;
   padding: 1.2em 1em 1em 1em;
   text-decoration: none;
@@ -172,15 +177,15 @@ html body .container .about-hero-image {
   height: 80vh;
   width: 100vw;
   margin-top: -55px;
-  transform: translateY(100px);
-  transition: transform 0.9s ease;
-}
-html body .container .about-hero-image.active {
-  transform: translateY(0);
 }
 html body .container .about-hero-image h1 {
   font-size: 5rem;
   font-weight: normal;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+}
+html body .container .about-hero-image h1.active {
+  transform: translateY(0);
 }
 html body .container .about-container {
   display: flex;
@@ -263,15 +268,15 @@ html body .container .contact-hero-image {
   height: 80vh;
   width: 100vw;
   margin-top: -55px;
-  transform: translateY(100px);
-  transition: transform 0.9s ease;
-}
-html body .container .contact-hero-image.active {
-  transform: translateY(0);
 }
 html body .container .contact-hero-image h1 {
   font-size: 5rem;
   font-weight: normal;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+}
+html body .container .contact-hero-image h1.active {
+  transform: translateY(0);
 }
 html body .container .contact-container {
   display: flex;
@@ -325,7 +330,7 @@ html body .container .contact-container .form-container .contact-form textarea {
 }
 html body .container .contact-container .form-container .contact-form .submit-btn {
   border: none;
-  padding: 1.5em;
+  padding: 1em;
   border-radius: 2px;
   font-weight: bold;
   box-shadow: 0 0 5px gray;
@@ -373,15 +378,15 @@ html body .container .menu-hero-image {
   height: 80vh;
   width: 100vw;
   margin-top: -55px;
-  transform: translateY(100px);
-  transition: transform 0.9s ease;
-}
-html body .container .menu-hero-image.active {
-  transform: translateY(0);
 }
 html body .container .menu-hero-image h1 {
   font-size: 5rem;
   font-weight: normal;
+  transform: translateY(100px);
+  transition: transform 0.9s ease;
+}
+html body .container .menu-hero-image h1.active {
+  transform: translateY(0);
 }
 html body .container .menu-container {
   display: flex;
@@ -542,26 +547,29 @@ html footer {
   }
   @keyframes fadeIn {
     0% {
-      transform: translateX(30%);
+      transform: translateX(50%);
     }
     100% {
       transform: translateX(0);
     }
   }
   html header .main-navigation.show ul li {
-    animation: fadeIn ease-in-out 0.2s;
+    animation: fadeIn ease 0.6s;
   }
   html header .main-navigation.show ul li:nth-child(1) {
     animation-delay: 100ms;
   }
   html header .main-navigation.show ul li:nth-child(2) {
-    animation-delay: 200ms;
-  }
-  html header .main-navigation.show ul li:nth-child(3) {
     animation-delay: 300ms;
   }
+  html header .main-navigation.show ul li:nth-child(3) {
+    animation-delay: 500ms;
+  }
   html header .main-navigation.show ul li:nth-child(4) {
-    animation-delay: 400ms;
+    animation-delay: 700ms;
+  }
+  html header .main-navigation.show ul li a {
+    font-size: 2.5rem;
   }
   html main {
     display: flex;
@@ -570,7 +578,7 @@ html footer {
     align-items: center;
   }
   html main .heading-section {
-    margin-top: 10em;
+    margin-top: 15em;
   }
   html .content-wrapper,
   html .feed-images {
@@ -615,6 +623,9 @@ html footer {
   html header .main-navigation ul {
     gap: 14em;
   }
+  html header .main-navigation ul li a {
+    font-size: 3rem;
+  }
 }
 @media screen and (min-width: 992px) {
   html {
@@ -654,15 +665,15 @@ html footer {
     list-style-type: none;
   }
   html header .main-navigation ul li a {
-    font-size: 0.9rem;
-  }
-  html header .main-navigation ul li a:hover {
-    cursor: pointer;
+    font-size: initial;
   }
   html main {
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 4em;
+  }
+  html main .heading-section {
+    margin-top: 6em;
   }
   html main .heading-section .heading .heading-title {
     font-size: larger;

@@ -132,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "fadeInOnScroll": () => (/* binding */ fadeInOnScroll)
 /* harmony export */ });
 function fadeInOnScroll() {
-  const elements = document.querySelectorAll('[data-observe');
+  const elements = document.querySelectorAll('[data-observe]');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       entry.target.classList.toggle('active', entry.isIntersecting);

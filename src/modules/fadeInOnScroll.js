@@ -1,5 +1,5 @@
 export function fadeInOnScroll() {
-  const elements = document.querySelectorAll('[data-observe');
+  const elements = document.querySelectorAll('[data-observe]');
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

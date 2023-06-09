@@ -6,8 +6,8 @@
 
 <div class="container">
 
-  <div class="contact-hero-image" data-observe>
-    <h1><?php the_title();?></h1>
+  <div class="contact-hero-image">
+    <h1 data-observe><?php the_title();?></h1>
   </div>
 
   <div class="contact-container" data-observe>

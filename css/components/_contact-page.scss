@@ -9,16 +9,16 @@
   height: 80vh;
   width: 100vw;
   margin-top: -55px;
-  transform: translateY(100px);
-  transition: transform 0.9s ease;
-
-  &.active {
-    transform: translateY(0);
-  }
 
   h1 {
     font-size: 5rem;
     font-weight: normal;
+    transform: translateY(100px);
+    transition: transform 0.9s ease;
+
+    &.active {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -79,7 +79,7 @@
 
       .submit-btn {
         border: none;
-        padding: 1.5em;
+        padding: 1em;
         border-radius: 2px;
         font-weight: bold;
         box-shadow: 0 0 5px gray;
